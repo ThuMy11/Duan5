@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-text: #5CD9E0;
+    --color-white: #fff;
+    --color-black: #333;
+    --color-artist: #666666;
+}
+.paddingLeftRight{
+    padding-left: 0; 
+    padding-right: 0;
+}
+.paddingTopBottom{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+p{
+    margin-bottom: 0px;
+}
+body{
+    background-color: #fff;
+}
+header{
+    height: 45px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #c7c7c7;
+}
+header .logo{
+    font-weight: 600;
+}
+header .navbars{
+    position: absolute;
+    padding: 0px 10px;
+    left: 0;
+}
+.listMenu{
+    height: 100vh;
+    padding: 0;
+    background-color: #fff;
+    display: none;
+}
+.listMenu ul{
+    padding-left: 0px;
+}
+.listMenu ul li{
+    list-style: none;
+    padding: 10px 10px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.listMenu ul li a{
+    color: #333;
+    font-weight: 600;
+}
+.listMenu ul li:first-child{
+    border-top: 1px solid #c8c8c8;
+}
+.listMenu ul li i{
+    margin-right: 10px;
+}
+
+.wrapper{
+    overflow-y: auto;
+    margin-bottom: 60px;
+    display: flex;
+}
+.listMusic1, .listMusic2{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper::-webkit-scrollbar-thumb{
+    display: none;
+}
+.listMusic1 li, .listMusic2 li{
+    padding: 0px;
+    display: flex;
+    height: 53px;
+}
+.listMusic1 li .image, .listMusic2 li .image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 5px;
+}
+.boxItemMusic{
+    position: relative;
+    height: 100%;
+}
+.listMusic1 li .image img, .listMusic2 li .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.boxItemMusic{
+    align-items: center;
+}
+.boxItemMusic .stt{
+    padding: 0;
+    color: var(--color-black);
+}
+.song-title span{
+    color: var(--color-black);
+    font-family: 'Roboto', sans-serif;
+}
+.song-title p{
+    color: var(--color-artist);
+    font-size: 12px;
+}
+
+.boxPlayMusic{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--color-white);
+    height: 60px;
+    z-index: 10;
+    border-top: 1px solid #bbbbbb;
+}
+.boxPlayMusic .imgFotter{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.boxPlayMusic .imgFotter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titleFotter{
+    flex: 1;
+    padding-left: 10px;
+}
+.titleFotter span{
+    font-size: 15px;
+}
+.titleFotter p{
+    font-size: 12px;
+}
+.coltrols{
+    align-items: center;
+    justify-content: space-between;
+}
+.coltrols button{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+@keyframes rotateImg{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        overflow-y: hidden!important; /* Ẩn thanh cuộn dọc */
+        white-space: nowrap;
+    }
+    .wrapper::-webkit-scrollbar-thumb{
+        display: none;
+    }
+}
+
+
+.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: rgb(0,0,0,0.1);
+}
+.progress .progress_bar{
+    position: relative;
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    background: #333;
+    cursor: pointer;
+}
+.boxPlayMusic .time{
+    position: absolute;
+    z-index: 10000;
+    background: #fff;
+    top: 0%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 2px 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.boxPlayMusic .time span{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+}
+
+footer{
+    background: #333;
+    margin-bottom: 60px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0px;
+}
+footer p{
+    margin: 0;
+}

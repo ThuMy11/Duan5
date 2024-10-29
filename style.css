@@ -1,0 +1,285 @@
+:root{
+    --color-white: #fff;
+}
+.paddingLeftRight{
+    padding-left: 0;
+    padding-right: 0;
+}
+header{
+    height: 45px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #c7c7c7;
+}
+header .logo{
+    font-weight: 600;
+}
+header .navbars{
+    position: absolute;
+    padding: 0px 10px;
+    left: 0;
+}
+.listMenu{
+    height: 100vh;
+    padding: 0;
+    background-color: #fff;
+    display: none;
+}
+.listMenu ul{
+    padding-left: 0px;
+}
+.listMenu ul li{
+    list-style: none;
+    padding: 10px 10px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.listMenu ul li a{
+    color: #333;
+    font-weight: 600;
+}
+.listMenu ul li:first-child{
+    border-top: 1px solid #c8c8c8;
+}
+.listMenu ul li i{
+    margin-right: 10px;
+}
+
+.search{
+    padding: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c7c7c7;
+}
+.search .icon{
+    padding-right: 0px;
+    padding-left: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.search .inputSearch{
+    padding-right: 0px;
+}
+.search .inputSearch input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.boxSlider{
+    height: 250px;
+    padding: 0;
+}
+.boxSlider .swiper, .swiper .swiper-slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.boxSlider .swiper .swiper-slide img{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+.discovery{
+    border-radius: 10px;
+    height: 130px;
+    background-image: url('https://stc-m.nixcdn.com/touch_v2/images/discovery/bg_wap.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+.discovery_playlist h2{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(255,255,255,.88);
+    padding-top: 16px;
+    padding-left: 16px;
+    text-transform: uppercase;
+}
+
+.discovery_playlist .discovery_detail {
+    height: 48px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(255,255,255,.5);
+    position: absolute;
+    top: 45px;
+    left: 79px;
+}
+.discovery_playlist .discovery_detail.non-login {
+    width: 190px;
+    left: 16px;
+}
+.btn_discovery {
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 48px;
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_genre{
+    margin-top: 20px;
+}
+.box_title_genre {
+    width: 100%;
+    height: 48px;
+    margin: 0 0 8px 0;
+    position: relative;
+    color: #333;
+}
+.box_title_genre h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+.platList_item ul{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+.playlist_item_single{
+    height: 175px;
+    padding: 0;
+    flex: 0 0 calc(50% - 10px);
+}
+.playlist_item_single .item_thumb{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.playlist_item_single .item_thumb img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.playlist_item_single h3{
+    font-size: 15px;
+    display: block;
+  	display: -webkit-box;
+  	height: 15px*1.3;
+  	line-height: 1.3;
+  	-webkit-line-clamp: 1;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	margin-top:5px;
+}
+.playlist_item_single .singer_song{
+    font-size: 12px;
+}
+
+.boxPlayMusic{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--color-white);
+    height: 60px;
+    z-index: 10;
+    border-top: 1px solid #bbbbbb;
+}
+.boxPlayMusic .imgFotter{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.boxPlayMusic .imgFotter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titleFotter{
+    flex: 1;
+    padding-left: 10px;
+}
+.titleFotter span{
+    font-size: 15px;
+}
+.titleFotter p{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.coltrols{
+    align-items: center;
+    justify-content: space-between;
+}
+.coltrols button{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+@keyframes rotateImg{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: rgb(0,0,0,0.1);
+}
+.progress .progress_bar{
+    position: relative;
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    background: #333;
+    cursor: pointer;
+}
+.boxPlayMusic .time{
+    position: absolute;
+    z-index: 10000;
+    background: #fff;
+    top: 0%;
+    transform: translateY(-50%);
+    padding: 2px 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.boxPlayMusic .time span{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+}
+
+footer{
+    background: #333;
+    margin-bottom: 60px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0px;
+}
+footer p{
+    margin: 0;
+}

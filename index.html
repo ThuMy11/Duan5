@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbars">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">Nhaccuatui</div>
+    </header>
+    <div class="wrapper">
+        <div class="listMenu col-12">
+            <ul>
+                <li ><a href="/"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li><a href="./page/top100/html/index.html"><i class="fa-solid fa-music"></i>Bài hát</a></li>
+            </ul>
+        </div>
+        <div class="search col-12 d-flex">
+            <div class="icon col-1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="inputSearch col-11">
+                <input type="text" placeholder="Tìm bài hát, video, playlist,...">
+            </div>
+        </div>
+        <div class="boxSlider col-12">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://avatar-ex-swe.nixcdn.com/slideshow/2023/09/08/9/f/b/5/1694183592849_org.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://avatar-ex-swe.nixcdn.com/slideshow/2023/09/07/f/6/2/7/1694072781373_org.jpg" alt="">
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="discovery">
+                <a id="btnLoginWD" href="/">
+                    <div class="discovery_playlist">
+                        <h2>Gợi ý Dành Cho Bạn</h2>
+                        <p class="discovery_detail non-login">Thưởng thức ngay những ca khúc phù hợp nhất với bạn</p>
+                        <div class="btn_discovery">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="home_genre no_seemore">
+                <div class="box_title_genre">
+                    <h2 class="title_genre">Nghe gì hôm nay</h2>
+                </div>
+                <div class="platList_item col-12">
+                    <ul class="list_Music row" style="flex-wrap: wrap;justify-content: space-between;">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boxPlayMusic paddingLeftRight col-12 d-flex">
+        <div class="progress">
+            <div class="progress_bar"></div>
+        </div>
+        <div class="time">
+            <span class="current">00:00</span>
+        </div>
+        <div class="col-8 d-flex" style="padding-left: 5px; padding-right: 0px; align-items: center;">
+            <div class="imgFotter">
+                <img src="" alt="">
+            </div>
+            <div class="titleFotter">
+                <span></span>
+                <p></p>
+            </div>
+            <audio class="songFotter" src=""></audio>
+        </div>
+        <div class="col-4 coltrols d-flex">
+            <i id="prev" title="Quay lại bài sau" class="fa-solid fa-backward"></i>
+            <button onclick="musicPlay()" id="play" title="Play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <i id="next" title="Bài tiếp theo" class="fa-solid fa-forward"></i>
+        </div>
+    </div>
+    <footer>
+        <div class="col-12">
+            Phạm Đức Trí
+            <p>Số điện thoại: 0123456789</p>
+            <p>Địa chỉ: Hà Nội</p>
+        </div>
+    </footer>
+</body>
+<script src="./app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+    });
+</script>
+</html>
